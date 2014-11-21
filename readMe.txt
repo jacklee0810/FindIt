@@ -1,0 +1,1 @@
+eclipse打开工程，将src及src/poi下所有的jar加入classpath
