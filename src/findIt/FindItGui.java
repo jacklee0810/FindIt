@@ -301,7 +301,7 @@ class FindItGui extends JFrame{
 		--thNum;
 		refThNum();
 		receMsg(exp,dir,"结果返回");
-		JFrame resOut=new JFrame("目录:"+dir+" 表达式:"+exp);
+		JFrame resOut=new JFrame("目录:"+dir+" 表达式:"+exp+" 筛选结果");
 		resOut.setBounds(300,100,800,600);
 		resOut.setResizable(false);
 		JList<?> resList=new JList<Object>(result.toArray());

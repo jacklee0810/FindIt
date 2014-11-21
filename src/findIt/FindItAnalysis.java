@@ -64,7 +64,7 @@ class FindItAnalysis{
 		/*
 		 * 获取文件列表
 		 */
-		gui.receMsg(expression, dir, "正在或取文件列表");
+		gui.receMsg(expression, dir, "正在获取文件列表");
 		fileList=FindItFileList.getFileList(dir);
 		/*
 		 * 初始结果为所有文件

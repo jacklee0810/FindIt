@@ -126,7 +126,11 @@ public class test222{
 }
 */
 
-
+/**
+ * Ö÷Àà
+ * @author SkyFire
+ * @version 1.0
+ */
 public class FindItMain{
 	public static void main(String [] args) throws InvocationTargetException, InterruptedException{
 		SwingUtilities.invokeAndWait(new Runnable() {
