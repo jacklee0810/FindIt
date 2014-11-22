@@ -18,7 +18,10 @@ class FindItFileList{
 		File file=new File(dir);
 		if (file.isDirectory()) {  
 			File[] dirFile = file.listFiles();  
-	        for (File f : dirFile) {  
+	        for (File f : dirFile) {
+	        	/*
+	        	 * 如果是目录，则递归获取，加入当前列表
+	        	 */
 	            if (f.isDirectory()) {
 	                fileList.addAll(getFileList(f.getAbsolutePath()));  
 	            } else {  

@@ -76,6 +76,9 @@ class FindItAnalysis{
 		gui.receMsg(expression, dir, "正在筛选并进行逻辑运算");
 		for(int i=0;i<op.length();++i){
 			try{
+				/*
+				 * 获取并组合匹配结果
+				 */
 				result=mergeIt.merge(result, FindItMatch.getMatch(fileList,(String) keyWordVec.toArray()[i]),op.charAt(i));
 			}catch(IOException e){
 				gui.errorOut(expression,dir,e.toString(),0);

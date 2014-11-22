@@ -18,6 +18,9 @@ class mergeIt{
 		ArrayList<String> tempArr=new ArrayList<String>();
 		switch (op){
 		case '&':
+			/*
+			 * 查找相同的，加入
+			 */
 			tempArr=new ArrayList<String>();
 			outer:
 			for(String t1:ls1){
@@ -30,6 +33,9 @@ class mergeIt{
 			}
 			break;
 		case '|':
+			/*
+			 * 加入第一个列表，然后查找第一个列表中没有的，加入
+			 */
 			tempArr=new ArrayList<String>(ls1);
 			outer:
 			for(String t2:ls2){
@@ -42,6 +48,9 @@ class mergeIt{
 			}
 			break;
 		case '^':
+			/*
+			 * 查找第二个列表中没有的，加入
+			 */
 			tempArr=new ArrayList<String>();
 			outer:
 			for(String t1:ls1){

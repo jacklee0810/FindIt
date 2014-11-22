@@ -1,15 +1,9 @@
 package findIt;
 
-import java.io.FileNotFoundException;
 import java.lang.reflect.InvocationTargetException;
-import java.util.Scanner;
-
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
-
-import org.apache.poi.openxml4j.exceptions.OpenXML4JException;
-import org.apache.xmlbeans.XmlException;
 
 
 /**
@@ -18,7 +12,7 @@ import org.apache.xmlbeans.XmlException;
  *
  */
 /*
-public class test{
+public class test222{
 	public static void main(String [] args){
 		ArrayList<String> arrl=new ArrayList<String>();
 		Scanner in=new Scanner(System.in);
