@@ -22,7 +22,7 @@ import javax.swing.JTextField;
  *
  */
 class FindItGui extends JFrame{
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 2L;
 	/**
 	 * 当前任务数量
 	 */
@@ -30,11 +30,11 @@ class FindItGui extends JFrame{
 	/**
 	 * 关键字输入框
 	 */
-	private JTextField inKey=new JTextField(15);
+	private JTextArea inKey=new JTextArea(2,15);
 	/**
 	 * 表达式输入框
 	 */
-	private JTextField inExpr=new JTextField(80);
+	private JTextArea inExpr=new JTextArea(2,80);
 	/**
 	 * 目录输入框
 	 */
@@ -160,6 +160,8 @@ class FindItGui extends JFrame{
 			 * 关于 内容
 			 */
 			aboutTxt.setText("FindIt 说明文档\n\n" +
+					"版本升级日志:\n" +
+					"2014-11-25:支持关键字里有换行符\n\n" +
 					"一、功能描述\n" +
 					"	筛选指定目录下满足指定条件的文档\n\n"+
 					"二、特色\n" +
@@ -203,9 +205,9 @@ class FindItGui extends JFrame{
 		/*
 		 * 设置各组件属性
 		 */
-		super("FindIt");
+		super("FindIt V2.0");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setBounds(400, 300, 600, 200);
+		this.setBounds(400, 300, 600, 300);
 		this.setResizable(false);
 		andBt.setSize(50, 30);
 		orBt.setSize(50, 30);
