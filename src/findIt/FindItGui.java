@@ -1,5 +1,4 @@
 package findIt;
-import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -11,8 +10,6 @@ import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
@@ -22,7 +19,10 @@ import javax.swing.JTextField;
  *
  */
 class FindItGui extends JFrame{
-	private static final long serialVersionUID = 2L;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	/**
 	 * 当前任务数量
 	 */
@@ -161,7 +161,7 @@ class FindItGui extends JFrame{
 			 */
 			aboutTxt.setText("FindIt 说明文档\n\n" +
 					"版本升级日志:\n" +
-					"2014-11-25:支持关键字里有换行符\n\n" +
+					"	2014-11-25:支持关键字里有换行符,优化GUI\n\n" +
 					"一、功能描述\n" +
 					"	筛选指定目录下满足指定条件的文档\n\n"+
 					"二、特色\n" +
@@ -205,10 +205,11 @@ class FindItGui extends JFrame{
 		/*
 		 * 设置各组件属性
 		 */
-		super("FindIt V2.0");
+		super("FindIt V1.1");
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setBounds(400, 300, 600, 300);
+		this.setBounds(400, 300, 600, 350);
 		this.setResizable(false);
+		/*
 		andBt.setSize(50, 30);
 		orBt.setSize(50, 30);
 		notBt.setSize(50, 30);
@@ -219,11 +220,13 @@ class FindItGui extends JFrame{
 		msgOut.setLineWrap(true);
 		msgOut.setFont(new Font(null,Font.PLAIN,12));
 		msgOut.add(new JScrollPane());
+		*/
 		
 		/*
 		 * 加入组件
 		 */
-		setLayout(new FlowLayout());
+		//setLayout(new FlowLayout());
+		setLayout(null);
 		this.add(allLb);
 		this.add(inExpr);
 		this.add(keyLb);
@@ -239,6 +242,20 @@ class FindItGui extends JFrame{
 		this.add(startBt);
 		this.add(pane);
 		
+		
+		allLb.setBounds(10, 25,100, 30);
+		inExpr.setBounds(120,10,450,60);
+		keyLb.setBounds(10,95,50,30);
+		inKey.setBounds(70,80,100,60);
+		andBt.setBounds(180, 95, 50, 30);
+		orBt.setBounds(240,95,50,30);
+		notBt.setBounds(300,95,50,30);
+		inDir.setBounds(360, 95, 150, 30);
+		chooseBt.setBounds(520,95,60,30);
+		aboutBt.setBounds(520, 160, 60, 30);
+		thNumLb.setBounds(10, 160, 200, 30);
+		startBt.setBounds(250, 160, 100, 30);
+		pane.setBounds(10, 200, 580,120);
 		/*
 		 * 注册事件监听
 		 */
